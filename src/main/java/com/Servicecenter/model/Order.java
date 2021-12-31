@@ -8,9 +8,11 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private double price;
+
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
+
     @OneToOne
     @JoinColumn(name = "bike_id")
     private Bike bike;
